@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.css';
 
 class Register extends React.Component {
   constructor(props) {
@@ -52,36 +53,40 @@ class Register extends React.Component {
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
                 <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                  className="inputfields pa2 input-reset ba b--black bg-transparent hover-white w-100"
                   type="text"
                   name="name"
                   id="name"
                   onChange={this.onNameChange}
+                  required
                 />
               </div>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
                 <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                  className="inputfields pa2 input-reset ba b--black bg-transparent hover-white w-100"
                   type="email"
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  required
                 />
               </div>
               <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                 <input
-                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                  className="inputfields b pa2 input-reset ba b--black bg-transparent hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  required
                 />
               </div>
             </fieldset>
             <div className="">
               <input
+                id='re_button'
                 onClick={this.onSubmitSignIn}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
